@@ -1,3 +1,16 @@
 :host {
-  display: flex;
+  display: block;
+
+  .id-form {
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    font-size: xx-large;
+  };
+
+  .mat-input-element {
+    border: 1px solid;
+  }
 }
