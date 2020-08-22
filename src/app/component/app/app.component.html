@@ -1,1 +1,9 @@
-<app-youtube-video videoId="oHg5SJYRHA0"></app-youtube-video>
+<form (ngSubmit)="onSubmit()" class="id-form">
+    <mat-form-field class="example-full-width">
+      <input matInput>
+    </mat-form-field>
+    <button class="button" type="submit">Go!</button>
+  </form>
+
+  <div class="title">{{videoId$ | async}}</div>
+  <app-youtube-video [videoId]="videoId$ | async"></app-youtube-video>
