@@ -10,7 +10,7 @@ import {BehaviorSubject} from 'rxjs';
 export class AppComponent {
   title = 'YouTube Mixer';
 
-  private readonly form: FormGroup;
+  readonly form: FormGroup;
 
   private readonly id: AbstractControl;
 
