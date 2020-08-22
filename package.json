@@ -27,6 +27,7 @@
     "@types/youtube": "0.0.39",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
+    "youtube": "^0.1.0",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

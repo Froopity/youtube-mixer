@@ -5,4 +5,4 @@
   <button class="button" type="submit">Go!</button>
 </form>
 <div class="title">{{videoId$ | async}}</div>
-<youtube-player [videoId]='videoId$ | async'></youtube-player>
+<youtube-player #player [videoId]='videoId$ | async'></youtube-player>
