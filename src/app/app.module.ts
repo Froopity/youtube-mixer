@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './component/app/app.component';
 import { YoutubeVideoComponent } from './component/youtube-video/youtube-video.component';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { YoutubeVideoComponent } from './component/youtube-video/youtube-video.c
     YoutubeVideoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
