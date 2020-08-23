@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mixer-37fd9": {
+      "hosting": {
+        "yt-mixer": [
+          "mixer-37fd9"
+        ]
+      }
+    }
+  }
+}
