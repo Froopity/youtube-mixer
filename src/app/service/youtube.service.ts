@@ -13,6 +13,7 @@ export class YoutubeApiService {
   constructor(public http: HttpClient) { }
 
   getDataForVideo(video: string): Observable<any> {
+    console.log(Keys.FIREBASE_API_KEY);
     const url = 'https://www.googleapis.com/youtube/v3/videos?id=' + video + '&key=' + this.apiKey + '&part=snippet,statistics';
     return this.http.get(url);
   }

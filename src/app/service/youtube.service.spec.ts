@@ -2,7 +2,7 @@ import {TestBed} from '@angular/core/testing';
 
 import {YoutubeApiService} from './youtube.service';
 
-describe('YoutubeService', () => {
+describe('YoutubeApiService', () => {
   let service: YoutubeApiService;
 
   beforeEach(() => {

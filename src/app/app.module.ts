@@ -18,12 +18,14 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireFunctionsModule} from '@angular/fire/functions';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
+import { SearchBarComponent } from './component/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrossfadeButtonsComponent,
-    YoutubeVideoComponent
+    YoutubeVideoComponent,
+    SearchBarComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

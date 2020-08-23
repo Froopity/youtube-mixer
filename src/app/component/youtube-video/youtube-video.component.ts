@@ -87,6 +87,7 @@ export class YoutubeVideoComponent implements OnInit, OnDestroy {
   onSubmit(): void {
     const value = this.id.value as string;
     const values = value.split('=');
+    console.log('i ran');
 
     this.videoId$.next(values[values.length - 1]);
 
