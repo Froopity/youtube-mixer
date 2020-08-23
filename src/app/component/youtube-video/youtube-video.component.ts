@@ -1,5 +1,6 @@
 import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup} from '@angular/forms';
+import {YoutubeApiService} from '../../service/youtube.service';
 import {BehaviorSubject, Subject} from 'rxjs';
 import {VolumeService} from '../../service/volume.service';
 import {YouTubePlayer} from '@angular/youtube-player';
@@ -39,8 +40,10 @@ export class YoutubeVideoComponent implements OnInit, OnDestroy {
   private readonly id: AbstractControl;
 
   videoId$ = new BehaviorSubject<string>('oHg5SJYRHA0');
+  videoTitle$ = new BehaviorSubject<string>(`RickRoll'D`);
 
   constructor(private readonly volumeService: VolumeService,
+              private readonly youtubeService: YoutubeApiService,
               formBuilder: FormBuilder) {
     this.form = formBuilder.group({
       id: ''
@@ -86,5 +89,9 @@ export class YoutubeVideoComponent implements OnInit, OnDestroy {
     const values = value.split('=');
 
     this.videoId$.next(values[values.length - 1]);
+
+    this.youtubeService.getDataForVideo(values[values.length - 1]).subscribe(data =>
+      this.videoTitle$.next(data.items[0].snippet.title)
+    );
   }
 }
