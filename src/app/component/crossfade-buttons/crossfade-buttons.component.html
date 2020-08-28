@@ -1,4 +1,7 @@
-<button (click)="func(1)">1</button>
-<button (click)="func(5)">5</button>
-<button (click)="func(10)">10</button>
-<button (click)="func(30)">30</button>
+<button class="crossfade" (click)="fade()">Crossfade</button>
+<div class="durations">
+  <button *ngFor="let duration of durations" (click)="click(duration)"
+          [ngClass]="isSelected(duration) ? 'btn-selected' : 'btn'">
+    {{duration}}
+  </button>
+</div>

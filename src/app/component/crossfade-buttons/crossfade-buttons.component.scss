@@ -1,0 +1,16 @@
+:host {
+  .crossfade {
+    width: 116px;
+    height: 369px;
+    margin-top: 58px;
+  }
+
+  .durations {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-selected {
+    background-color: lime;
+  }
+}
