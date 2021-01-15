@@ -1,7 +1,14 @@
-<button class="crossfade" (click)="fade()">Crossfade</button>
-<div class="durations">
-  <button *ngFor="let duration of durations" (click)="click(duration)"
-          [ngClass]="isSelected(duration) ? 'btn-selected' : 'btn'">
-    {{duration}}
-  </button>
+<div class="container">
+  <div class="buttons">
+    <button mat-button class="crossfade" (click)="fade()">
+      <i class="material-icons {{'facing-' + (direction$ | async)}} {{'speed-' + (duration$ | async)}}"
+         [ngClass]="{'spinny' : (fading$ | async)}">fast_forward</i>
+    </button>
+    <div class="durations">
+      <button mat-button *ngFor="let duration of durations" (click)="click(duration)"
+              [ngClass]="(duration$ | async) === duration ? 'btn-selected' : 'btn'">
+        {{duration}}
+      </button>
+    </div>
+  </div>
 </div>

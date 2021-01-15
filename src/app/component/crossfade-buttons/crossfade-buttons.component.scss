@@ -1,16 +1,96 @@
 :host {
+  position: relative;
+  width: 250px;
+  margin: 107px 10px 0 10px;
+
+  .buttons {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+  }
+
   .crossfade {
-    width: 116px;
-    height: 369px;
-    margin-top: 58px;
+    width: 100%;
+    height: 350px;
+
+    i {
+      width: 100%;
+      font-size: xx-large;
+    }
   }
 
   .durations {
     display: flex;
     align-items: center;
+    background-color: var(--accent);
+    border-radius: 10px;
+    margin: 5px;
+
+    .mat-button {
+      min-width: 50px;
+      max-width: 60px;
+    }
   }
 
-  .btn-selected {
-    background-color: lime;
+  .facing-left {
+    transform: scaleX(-1) translate3d(0, 0, 0);
+
+    &.spinny {
+      &.speed-5 {
+        animation: spin-reverse 5s infinite linear;
+      }
+
+      &.speed-10 {
+        animation: spin-reverse 10s infinite linear;
+      }
+
+      &.speed-30 {
+        animation: spin-reverse 30s infinite linear;
+      }
+
+      &.speed-60 {
+        animation: spin-reverse 60s infinite linear;
+      }
+    }
+  }
+
+  .facing-right {
+    &.spinny {
+      &.speed-5 {
+        animation: spin 5s infinite linear;
+      }
+
+      &.speed-10 {
+        animation: spin 10s infinite linear;
+      }
+
+      &.speed-30 {
+        animation: spin 30s infinite linear;
+      }
+
+      &.speed-60 {
+        animation: spin 60s infinite linear;
+      }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+
+  @keyframes spin-reverse {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

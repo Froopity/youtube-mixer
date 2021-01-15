@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin base-theme($theme) {
+
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  :root {
+    --primary: #{mat-color($primary)};
+    --accent: #{mat-color($accent)};
+    --accent-highlight: #{mat-color($accent, 200)};
+    --warn: #{mat-color($warn)};
+    --background: #{mat-color($background)};
+    --foreground: #{mat-color($foreground)};
+  }
+
+  html, body {
+    height: 100%;
+    width: 1630px;
+    margin: auto;
+  }
+  body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  .container {
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mat-button {
+    background-color: var(--accent);
+  }
+
+  .btn-selected {
+    background-color: var(--accent-highlight);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,16 +1,36 @@
 :host {
-  display: block;
+  .mat-form-field {
+    width: 100%;
+  }
 
   .id-form {
     display: flex;
     align-items: center;
   }
 
+  .mat-form-field {
+    padding: 0 5px;
+    height: 36px;
+  }
+
+  .container.form-background {
+    padding: 0 10px;
+    height: 61px;
+    margin-bottom: 5px;
+  }
+
+  .mat-button {
+    top: 12px;
+  }
+
+  .container {
+    border-radius: 15px;
+    padding: 10px;
+    height: unset;
+  }
+
   .title {
     font-size: xx-large;
-  };
-
-  .mat-input-element {
-    border: 1px solid;
+    padding: 10px 5px;
   }
 }

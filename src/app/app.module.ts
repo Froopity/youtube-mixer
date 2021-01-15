@@ -18,6 +18,7 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireFunctionsModule} from '@angular/fire/functions';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {AngularFireModule} from '@angular/fire';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
